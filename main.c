@@ -2,15 +2,18 @@
 
 int main(void)
 {
-    int num;
+    int count = 0;
+    char c;
 
-    printf("정수 하나를 입력하시오 :");
-    scanf("%i", &num);
+    printf("input a string: ");
 
-    if (num > 0)
-        printf("절대값은 %i 입니다.\n", num);
-    else
-        printf("절대값은 %i 입니다.\n", -num);
+    while ((c = getchar()) != '\n')
+    {
+        if (c >= '0' && c <= '9')
+            count++;
+    }
+
+    printf("the number of digits is %i\n", count);
 
     return 0;
 }
